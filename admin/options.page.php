@@ -20,6 +20,8 @@ $opt_list = array(
 	'block-odd-a-color',
 	'block-even-a-hover-color',
 	'block-odd-a-hover-color',
+	'nav-a-color',
+	'nav-a-hover-color',
 	'footer-content',
 	'extra-css'
 );
@@ -114,6 +116,17 @@ if ( isset( $_POST[ 'saving' ] ) and @$_POST[ 'saving' ] == "y" ) {
 					</tr>
 				</table>
 			</td>
+		</tr>
+		<tr>
+			<td colspan="2"><h3><?php _e( 'Nav Options', 'scrollato' ); ?></h3></td>
+		</tr>
+		<tr>
+			<td class="label"><label for="nav-a-color"><?php _e( 'Nav link color', 'scrollato' ); ?>: </label></td>
+			<td><input type="text" id="nav-a-color" class="color-input" name="nav-a-color" value="<?php echo get_option( 'scrollato-nav-a-color' ); ?>" /><div class="color-sample"></div></td>
+		</tr>
+		<tr>
+			<td class="label"><label for="nav-a-hover-color"><?php _e( 'Nav link-hover color', 'scrollato' ); ?>: </label></td>
+			<td><input type="text" id="nav-a-hover-color" class="color-input" name="nav-a-hover-color" value="<?php echo get_option( 'scrollato-nav-a-hover-color' ); ?>" /><div class="color-sample"></div></td>
 		</tr>
 		<tr>
 			<td colspan="2"><h3><?php _e( 'Footer Options', 'scrollato' ); ?></h3></td>

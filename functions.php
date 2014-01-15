@@ -79,7 +79,7 @@ $opt_list = array(
 	'header-height' => '800px',
 	'header-background-type' => 'image',
 	'header-background-color' => '#000000',
-	'header-background-image' => '',
+	'header-background-image' => get_bloginfo('wpurl') . '/wp-content/themes/Scrollato1/imgs/Red_geranium_by_qerubin.jpg',
 	'header-text-maxwidth' => '700px',
 	'header-text-color' => '#ffffff',
 	'header-extra-content' => '',
@@ -91,6 +91,8 @@ $opt_list = array(
 	'block-odd-a-color' => 'black',
 	'block-even-a-hover-color' => '#656565',
 	'block-odd-a-hover-color' => '#656565',
+	'nav-a-color' => '#121212',
+	'nav-a-hover-color' => '#ffffff',
 	'footer-content' => '<a href="http://filopoe.it/Scrollato/">Scrollato</a> theme by <a href="http://filopoe.it/">Gabriele Girelli</a>',
 	'extra-css' => ''
 );
