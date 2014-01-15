@@ -45,15 +45,19 @@ add_action( 'init', 'scrollato_reg_blocks' );
 
 
 #Rearrange Adming Menu
-function remove_menus() {
+function scrollato_admin_menu() {
 	remove_menu_page( 'edit.php' );
 	remove_menu_page( 'upload.php' );
 	remove_menu_page( 'edit.php?post_type=block' );
 
 	add_menu_page( __( 'Media', 'scrollato' ), __( 'Media', 'scrollato' ), 'manage_options', 'upload.php', '', '', 21 );
 	add_menu_page( __( 'Blocks', 'scrollato' ), __( 'Blocks', 'scrollato' ), 'manage_options', 'edit.php?post_type=block', '', 'dashicons-screenoptions', 19 );
+	add_submenu_page( 'themes.php', __( 'Themes Options', '' ), __( 'Themes Option', '' ), 'manage_options', 'themes_opt', 'scrollato_opt_page' );
 }
-add_action( 'admin_menu', 'remove_menus' );
+add_action( 'admin_menu', 'scrollato_admin_menu' );
+function scrollato_opt_page() {
+	include( 'admin/options.page.php' );
+}
 
 
 ?>
