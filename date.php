@@ -1,1 +1,0 @@
-Date archive template
