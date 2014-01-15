@@ -10,6 +10,7 @@ $opt_list = array(
 	'header-background-color',
 	'header-background-image',
 	'header-text-maxwidth',
+	'header-text-color',
 	'header-extra-content',
 	'footer-content',
 	'extra-css'
@@ -60,6 +61,10 @@ if ( isset( $_POST[ 'saving' ] ) and @$_POST[ 'saving' ] == "y" ) {
 		<tr>
 			<td class="label"><label for="header-text-maxwidth"><?php _e( 'Header text max-width', 'scrollato' ); ?>: </label></td>
 			<td><input type="text" size="5" id="header-text-maxwidth" name="header-text-maxwidth" value="<?php echo get_option( 'scrollato-header-text-maxwidth' ); ?>" /></td>
+		</tr>
+		<tr>
+			<td><label for="header-text-color">Header text color: </label></td>
+			<td><input type="text" id="header-text-color" name="header-text-color" size="10" value="<?php echo get_option( 'scrollato-header-text-color' ); ?>" /></td>
 		</tr>
 		<tr>
 			<td class="label"><label for="header-extra-content" style="vertical-align: top;"><?php _e( 'Header extra content', 'scrollato' ); ?>: </label></td>

@@ -81,6 +81,7 @@ $opt_list = array(
 	'header-background-color' => '#000000',
 	'header-background-image' => '',
 	'header-text-maxwidth' => '700px',
+	'header-text-color' => '#ffffff',
 	'header-extra-content' => '',
 	'footer-content' => '<a href="http://filopoe.it/Scrollato/">Scrollato</a> theme by <a href="http://filopoe.it/">Gabriele Girelli</a>',
 	'extra-css' => ''
@@ -110,16 +111,26 @@ add_action('admin_print_scripts', 'scrollato_admin_scripts');
 add_action('admin_print_styles', 'scrollato_admin_styles');
 
 
-###################
-# PHP Stylesheets #
-###################
+####################
+# PHP Style/Script #
+####################
 
 wp_enqueue_style('dynamic-css', admin_url('admin-ajax.php') . '?action=dynamic_css', $deps, $ver, $media);
 function dynamic_css() {
-  require(get_template_directory().'/style.php');
+  require( get_template_directory() . '/style.php' );
   exit;
 }
 add_action('wp_ajax_dynamic_css', 'dynamic_css');
 add_action('wp_ajax_nopriv_dynamic_css', 'dynamic_css');
+
+function scrollato_dynamic_js() {
+    wp_register_script( 'dynamic-js', get_template_directory_uri() . "/js/front-page.js.php" );
+    wp_register_script( 'skrollr', get_template_directory_uri() . "/js/skrollr.js" );
+    wp_register_script( 'scrollto', get_template_directory_uri() . "/js/scrollto.min.js" );
+    wp_enqueue_script( 'dynamic-js' );
+    wp_enqueue_script( 'skrollr' );
+    wp_enqueue_script( 'scrollto' );
+}
+add_action('wp_enqueue_scripts', 'scrollato_dynamic_js');
 
 ?>
