@@ -1,0 +1,1 @@
+Attached image template
