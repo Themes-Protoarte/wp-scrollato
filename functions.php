@@ -1,11 +1,16 @@
 <?php
 
-# Add Theme Support to Additional Functions
+#############################################
+# Add Theme Support to Additional Functions #
+#############################################
+
 add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form' ) );
 
+#############################
+# Add Blocks for Front-page #
+#############################
 
-# Add Blocks for Front-page
 function scrollato_reg_blocks() {
 	$labels = array(
 		'name'               => __( 'Blocks', 'scrollato' ),
@@ -43,8 +48,10 @@ function scrollato_reg_blocks() {
 add_action( 'init', 'scrollato_reg_blocks' );
 
 
+########################
+# Rearrange Admin Menu #
+########################
 
-# Rearrange Admin Menu
 function scrollato_admin_menu() {
 	remove_menu_page( 'edit.php' );
 	remove_menu_page( 'upload.php' );
@@ -64,8 +71,10 @@ function scrollato_order_page() {
 }
 
 
+###########
+# Options #
+###########
 
-# Options
 $opt_list = array(
 	'header-height' => '800px',
 	'header-background-type' => 'image',
@@ -85,8 +94,10 @@ foreach ( $opt_list as $opt => $val ) {
 }
 
 
+#####################
+# Use Media Library #
+#####################
 
-# Use Media Library
 function scrollato_admin_scripts() {
 	wp_enqueue_script('media-upload');
 	wp_enqueue_script('thickbox');
@@ -97,5 +108,16 @@ function scrollato_admin_styles() {
 }
 add_action('admin_print_scripts', 'scrollato_admin_scripts');
 add_action('admin_print_styles', 'scrollato_admin_styles');
+
+
+###################
+# PHP Stylesheets #
+###################
+
+function scrollato_reg_style() {
+	wp_register_style( 'scrollato-header-opt', "style.php" );
+	wp_enqueue_style( 'scrollato-header-opt' );
+}
+add_action( 'wp_enqueue_scripts', 'scrollato_reg_style' );
 
 ?>

@@ -1,0 +1,23 @@
+table .label {
+	padding-right: 0.5rem;
+	text-align: right;
+	vertical-align: top;
+}
+
+#sent-msg {
+	position: absolute;
+	top: 1em;
+	left: -25px;
+	right: 0;
+
+	margin: 0;
+	padding: 0.5em;
+
+	z-index: 2;
+
+	background-color: rgba( 36, 138, 30, .6 );
+	box-shadow: white 0 0 5px;
+	
+	color: white;
+	text-align: center;
+}

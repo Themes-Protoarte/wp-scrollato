@@ -1,81 +1,19 @@
-<style type="text/css">
-	table .label {
-		padding-right: 0.5rem;
-		text-align: right;
-		vertical-align: top;
-	}
-
-	#sent-msg {
-		position: absolute;
-		top: 1em;
-		left: -25px;
-		right: 0;
-
-		margin: 0;
-		padding: 0.5em;
-
-		z-index: 2;
-
-		background-color: rgba( 36, 138, 30, .6 );
-		box-shadow: white 0 0 5px;
-		
-		color: white;
-		text-align: center;
-	}
-</style>
-
+<link rel="stylesheet" href="<?php echo get_template_directory_uri() . "/css/options_page.css"; ?>" />
 <?php
-
-function backgroundColorRow() {
-	return "<td class='label'><label for='header-background-color'>Header background color: </label></td><td><input type='text' id='header-background-color' name='header-background-color' value='" . get_option( 'scrollato-header-background-color' ) . "' size='10' /></td>";
-}
-
-function backgroundImageRow() {
-	if ( get_option( 'scrollato-header-background-image' ) != "" ) { $t = "<img src='" . get_option( 'scrollato-header-background-image' ) . "' style='padding: 2px; max-height: 150px; max-width: 500px; background-color: white; border: 1px solid #989898;' /><br />"; } else { $t = ''; }
-	return "<td class='label'><label for='header-background-image-media'>Header background image: </label></td><td>$t<input type='text' id='header-background-image' name='header-background-image' size='30' value='" . get_option( 'scrollato-header-background-image' ) . "' /><input type='button' id='header-background-image-media' class='button action' name='header-background-image-media' value='" . __( 'Upload image', 'scrollato' ) . "' /></td>";
-}
-
-?>
-
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		// Fade Out "Saved Option" message
-		$("#sent-msg").delay(3000).fadeOut(800);
-
-		// Change background options based on selected value
-		$("#header-background-type").change(function() {
-			if ( $("#header-background-type").val() == 'color' ) {
-				$("#header-background-option").html("<?php echo backgroundColorRow(); ?>");
-			} else if ( $("#header-background-type").val() == 'image' ) {
-				$("#header-background-option").html("<?php echo backgroundImageRow(); ?>");
-				$('#header-background-image-media').click(function() {  
-					tb_show( 'Upload a logo', 'media-upload.php?type=image&TB_iframe=true' );  
-					return false;  
-				});  
-			}
-		});
-
-		// Use Media Library to upload
-		$('#header-background-image-media').click(function() {  
-			tb_show( 'Upload a logo', 'media-upload.php?type=image&TB_iframe=true' );  
-			return false;  
-		});
-
-		window.send_to_editor = function(html) {  
-			var image_url = $('img',html).attr('src');  
-			$('#header-background-image').val(image_url);  
-			tb_remove();  
-			$('#upload_logo_preview img').attr('src',image_url);  
-
-			$('#submit_options_form').trigger('click');  
-		}  
-	});	
-</script>
-
-<?php 
+require_once( dirname(dirname(__FILE__)) . "/lib/options_page.lib.php" );
+require_once( dirname(dirname(__FILE__)) . "/js/options_page.js.php" );
 
 // Save options
-$opt_list = array( 'header-height', 'header-background-type', 'header-background-color', 'header-background-image', 'header-text-maxwidth', 'header-extra-content', 'footer-content', 'extra-css' );
+$opt_list = array(
+	'header-height',
+	'header-background-type',
+	'header-background-color',
+	'header-background-image',
+	'header-text-maxwidth',
+	'header-extra-content',
+	'footer-content',
+	'extra-css'
+);
 if ( isset( $_POST[ 'saving' ] ) and @$_POST[ 'saving' ] == "y" ) {
 	foreach( $opt_list as $opt ) {
 			update_option( 'scrollato-' . $opt, $_POST[ $opt ] );
