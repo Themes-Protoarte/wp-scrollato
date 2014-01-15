@@ -114,10 +114,12 @@ add_action('admin_print_styles', 'scrollato_admin_styles');
 # PHP Stylesheets #
 ###################
 
-function scrollato_reg_style() {
-	wp_register_style( 'scrollato-header-opt', "style.php" );
-	wp_enqueue_style( 'scrollato-header-opt' );
+wp_enqueue_style('dynamic-css', admin_url('admin-ajax.php') . '?action=dynamic_css', $deps, $ver, $media);
+function dynamic_css() {
+  require(get_template_directory().'/style.php');
+  exit;
 }
-add_action( 'wp_enqueue_scripts', 'scrollato_reg_style' );
+add_action('wp_ajax_dynamic_css', 'dynamic_css');
+add_action('wp_ajax_nopriv_dynamic_css', 'dynamic_css');
 
 ?>

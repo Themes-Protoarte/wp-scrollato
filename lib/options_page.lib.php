@@ -21,7 +21,8 @@ function backgroundImageRow() {
 	$s .= "<label for='header-background-image-media'>Header background image: </label>";
 	$s .= "</td><td>";
 	$s .= "$t<input type='text' id='header-background-image' name='header-background-image' size='30' value='" . get_option( 'scrollato-header-background-image' ) . "' />";
-	$s .= "<input type='button' id='header-background-image-media' class='button action' name='header-background-image-media' value='" . __( 'Upload image', 'scrollato' ) . "' />";
+	$s .= " <input type='button' id='header-background-image-media' class='button action' name='header-background-image-media' value='" . __( 'Upload image', 'scrollato' ) . "' />";
+	$s .= " <input type='button' class='button action' id='header-background-image-default' value='" . __( 'Default', 'scrollato' ) . "' />";
 	$s .= "</td>";
 
 	return $s;

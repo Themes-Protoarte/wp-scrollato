@@ -37,6 +37,12 @@ require_once( dirname(dirname(__FILE__)) . "/lib/options_page.lib.php" );
 			$('#upload_logo_preview img').attr('src',image_url);  
 
 			$('#submit_options_form').trigger('click');  
-		}  
+		} 
+
+		// Restore Default Image
+		$("#header-background-image-default").click(function() {
+			$("#header-background-option td img").remove();
+			$("#header-background-image").val("<?php echo get_template_directory_uri() . '/imgs/Red_geranium_by_qerubin.jpg'; ?>");
+		});
 	});	
 </script>
