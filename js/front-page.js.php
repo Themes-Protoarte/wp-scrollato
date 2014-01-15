@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
 	$("#front-nav a").each(function() {
 		$(this).click(function(e) {
 			e.preventDefault();
-			$.scrollTo( $("#block-" + $(this).attr('data-ind') ) );
+			$.scrollTo( $("#block-" + $(this).attr('data-ind') ), 800 );
 		});
 	});
 });

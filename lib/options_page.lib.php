@@ -5,7 +5,8 @@ function backgroundColorRow() {
 	$s = "<td class='label'>";
 	$s .= "<label for='header-background-color'>Header background color: </label>";
 	$s .= "</td><td>";
-	$s .= "<input type='text' id='header-background-color' name='header-background-color' value='" . get_option( 'scrollato-header-background-color' ) . "' size='10' />";
+	$s .= "<input type='text' id='header-background-color' class='color-input' name='header-background-color' value='" . get_option( 'scrollato-header-background-color' ) . "' size='10' />";
+	$s .= "<div class='color-sample'></div>";
 	$s .= "</td>";
 
 	return $s;

@@ -11,6 +11,10 @@ require_once( dirname(dirname(__FILE__)) . "/lib/options_page.lib.php" );
 
 			if ( $("#header-background-type").val() == 'color' ) {
 				$("#header-background-option").html("<?php echo backgroundColorRow(); ?>");
+				$("#header-background-option .color-input").siblings('.color-sample').css( { 'background-color' : $("#header-background-option .color-input").val() } );
+				$("#header-background-option .color-input").change(function() {
+					$("#header-background-option .color-input").siblings('.color-sample').css( { 'background-color' : $("#header-background-option .color-input").val() } );
+				});
 
 			} else if ( $("#header-background-type").val() == 'image' ) {
 				$("#header-background-option").html("<?php echo backgroundImageRow(); ?>");
@@ -43,6 +47,14 @@ require_once( dirname(dirname(__FILE__)) . "/lib/options_page.lib.php" );
 		$("#header-background-image-default").click(function() {
 			$("#header-background-option td img").remove();
 			$("#header-background-image").val("<?php echo get_template_directory_uri() . '/imgs/Red_geranium_by_qerubin.jpg'; ?>");
+		});
+
+		// Color sampling
+		$(".color-input").each(function() {
+			$(this).siblings('.color-sample').css( { 'background-color' : $(this).val() } );
+			$(this).change(function() {
+				$(this).siblings('.color-sample').css( { 'background-color' : $(this).val() } );
+			});
 		});
 	});	
 </script>

@@ -83,6 +83,14 @@ $opt_list = array(
 	'header-text-maxwidth' => '700px',
 	'header-text-color' => '#ffffff',
 	'header-extra-content' => '',
+	'block-even-bgcolor' => '#dadada',
+	'block-odd-bgcolor' => '#989898',
+	'block-even-color' => 'black',
+	'block-odd-color' => 'black',
+	'block-even-a-color' => 'black',
+	'block-odd-a-color' => 'black',
+	'block-even-a-hover-color' => '#656565',
+	'block-odd-a-hover-color' => '#656565',
 	'footer-content' => '<a href="http://filopoe.it/Scrollato/">Scrollato</a> theme by <a href="http://filopoe.it/">Gabriele Girelli</a>',
 	'extra-css' => ''
 );

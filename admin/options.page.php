@@ -12,6 +12,14 @@ $opt_list = array(
 	'header-text-maxwidth',
 	'header-text-color',
 	'header-extra-content',
+	'block-even-bgcolor',
+	'block-odd-bgcolor',
+	'block-even-color',
+	'block-odd-color',
+	'block-even-a-color',
+	'block-odd-a-color',
+	'block-even-a-hover-color',
+	'block-odd-a-hover-color',
 	'footer-content',
 	'extra-css'
 );
@@ -64,11 +72,48 @@ if ( isset( $_POST[ 'saving' ] ) and @$_POST[ 'saving' ] == "y" ) {
 		</tr>
 		<tr>
 			<td><label for="header-text-color">Header text color: </label></td>
-			<td><input type="text" id="header-text-color" name="header-text-color" size="10" value="<?php echo get_option( 'scrollato-header-text-color' ); ?>" /></td>
+			<td><input type="text" class="color-input" id="header-text-color" name="header-text-color" size="10" value="<?php echo get_option( 'scrollato-header-text-color' ); ?>" /><div class="color-sample"></div></td>
 		</tr>
 		<tr>
 			<td class="label"><label for="header-extra-content" style="vertical-align: top;"><?php _e( 'Header extra content', 'scrollato' ); ?>: </label></td>
 			<td><textarea name="header-extra-content" id="header-extra-content" cols="80" rows="6"><?php echo stripslashes( get_option( 'scrollato-header-extra-content' ) ); ?></textarea></td>
+		</tr>
+		<tr>
+			<td colspan="2"><h3><?php _e( 'Blocks Options', 'scrollato' ); ?></h3></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<table width="100%">
+					<tr>
+						<td colspan="2" style="text-align: center; font-size: 1.15em; padding: 0.1em;"><b>Even blocks</b></td>
+						<td colspan="2" style="text-align: center; font-size: 1.15em; padding: 0.1em;"><b>Odd blocks</b></td>
+					</tr>
+					<tr>
+						<td class="label"><label for="block-even-bgcolor"><?php _e( 'Bgcolor', 'scrollato' ); ?>: </label></td>
+						<td><input type="text" id="block-even-bgcolor" class="color-input" name="block-even-bgcolor" value="<?php echo get_option( 'scrollato-block-even-bgcolor' ); ?>" size="10"><div class="color-sample"></div></td>
+						<td class="label"><label for="block-odd-bgcolor"><?php _e( 'Bgcolor', 'scrollato' ); ?>: </label></td>
+						<td><input type="text" id="block-odd-bgcolor" class="color-input" name="block-odd-bgcolor" value="<?php echo get_option( 'scrollato-block-odd-bgcolor' ); ?>" size="10"><div class="color-sample"></div></td>
+					</tr>
+					<tr>
+						<td class="label"><label for="block-even-color"><?php _e( 'Color', 'scrollato' ); ?>: </label></td>
+						<td><input type="text" class="color-input" id="block-even-color" name="block-even-color" value="<?php echo get_option( 'scrollato-block-even-color' ); ?>" size="10"><div class="color-sample"></div></td>
+						<td class="label"><label for="block-odd-color"><?php _e( 'Color', 'scrollato' ); ?>: </label></td>
+						<td><input type="text" class="color-input" id="block-odd-color" name="block-odd-color" value="<?php echo get_option( 'scrollato-block-odd-color' ); ?>" size="10"><div class="color-sample"></div></td>
+					</tr>
+					<tr>
+						<td class="label"><label for="block-even-a-color"><?php _e( 'Link color', 'scrollato' ); ?>: </label></td>
+						<td><input type="text" class="color-input" id="block-even-a-color" name="block-even-a-color" value="<?php echo get_option( 'scrollato-block-even-a-color' ); ?>" size="10" /><div class="color-sample"></div></td>
+						<td class="label"><label for="block-odd-a-color"><?php _e( 'Link color', 'scrollato' ); ?>: </label></td>
+						<td><input type="text" class="color-input" id="block-odd-a-color" name="block-odd-a-color" value="<?php echo get_option( 'scrollato-block-odd-a-color' ); ?>" size="10" /><div class="color-sample"></div></td>
+					</tr>
+					<tr>
+						<td class="label"><label for="block-even-a-hover-color"><?php _e( 'Link-hover color', 'scrollato' ); ?>: </label></td>
+						<td><input type="text" class="color-input" id="block-even-a-hover-color" name="block-even-a-hover-color" value="<?php echo get_option( 'scrollato-block-even-a-hover-color' ); ?>" size="10" /><div class="color-sample"></div></td>
+						<td class="label"><label for="block-odd-a-hover-color"><?php _e( 'Link-hover color', 'scrollato' ); ?>: </label></td>
+						<td><input type="text" class="color-input" id="block-odd-a-hover-color" name="block-odd-a-hover-color" value="<?php echo get_option( 'scrollato-block-odd-a-hover-color' ); ?>" size="10" /><div class="color-sample"></div></td>
+					</tr>
+				</table>
+			</td>
 		</tr>
 		<tr>
 			<td colspan="2"><h3><?php _e( 'Footer Options', 'scrollato' ); ?></h3></td>
