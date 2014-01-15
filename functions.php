@@ -4,31 +4,9 @@
 add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form' ) );
 
-$defaults = array(
-	'default-color' => 'f0f0f0',
-	'default-image'          => '',
-);
-add_theme_support( 'custom-background', $defaults );
-
-$defaults = array(
-	'default-image'          => '',
-	'random-default'         => false,
-	'width'                  => 0,
-	'height'                 => 0,
-	'flex-height'            => false,
-	'flex-width'             => false,
-	'default-text-color'     => '000000',
-	'header-text'            => true,
-	'uploads'                => true,
-	'wp-head-callback'       => '',
-	'admin-head-callback'    => '',
-	'admin-preview-callback' => '',
-);
-add_theme_support( 'custom-header', $defaults );
-
 
 #Add Blocks for Front-page
-function codex_custom_init() {
+function scrollato_reg_blocks() {
 	$labels = array(
 		'name'               => __( 'Blocks', 'scrollato' ),
 		'singular_name'      => __( 'Block', 'scrollato' ),
@@ -57,22 +35,23 @@ function codex_custom_init() {
 		'has_archive'        => false,
 		'hierarchical'       => false,
 		'menu_position'      => null,
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' )
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail' ),
 	);
 
-	register_post_type( 'book', $args );
+	register_post_type( 'block', $args );
 }
-add_action( 'init', 'codex_custom_init' );
+add_action( 'init', 'scrollato_reg_blocks' );
+
 
 
 #Rearrange Adming Menu
 function remove_menus() {
 	remove_menu_page( 'edit.php' );
 	remove_menu_page( 'upload.php' );
-	remove_menu_page( 'edit.php?post_type=book' );
+	remove_menu_page( 'edit.php?post_type=block' );
 
 	add_menu_page( __( 'Media', 'scrollato' ), __( 'Media', 'scrollato' ), 'manage_options', 'upload.php', '', '', 21 );
-	add_menu_page( __( 'Blocks', 'scrollato' ), __( 'Blocks', 'scrollato' ), 'manage_options', 'edit.php?post_type=book', '', 'dashicons-screenoptions', 19 );
+	add_menu_page( __( 'Blocks', 'scrollato' ), __( 'Blocks', 'scrollato' ), 'manage_options', 'edit.php?post_type=block', '', 'dashicons-screenoptions', 19 );
 }
 add_action( 'admin_menu', 'remove_menus' );
 

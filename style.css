@@ -13,3 +13,191 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+@font-face {
+  font-family: 'Montserrat Alternates';
+  font-style: normal;
+  font-weight: 400;
+  src: local('MontserratAlternates-Regular'), url(http://themes.googleusercontent.com/static/fonts/montserratalternates/v2/z2n1Sjxk9souK3HCtdHukiVz4wwEV01Tv2kxNh88JXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Exo 2'), local('Exo2-Regular'), url(http://themes.googleusercontent.com/static/fonts/exo2/v1/8C2PVL2WIMUnPF90ukjrZQ.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(http://themes.googleusercontent.com/static/fonts/roboto/v10/2UX7WLTfW3W8TclTUvlFyQ.woff) format('woff');
+}
+
+
+
+body,
+html {
+	height: 100%;
+	width: 100%;
+
+	margin: 0;
+	padding: 0;
+
+	font-family: "Roboto";
+	font-size: 16px;
+}
+
+body {
+	margin-top: -32px;
+}
+
+/* FRONT HEADER */
+
+#site-head {
+	position: relative;
+	display: table;
+
+	height: 800px;
+	width: 100%;
+
+	margin: 0;
+	padding: 0;
+
+	background-image: url('imgs/Red_geranium_by_qerubin.jpg');
+	background-attachment: scroll;
+	background-position: center center;
+	background-size: cover;
+
+	text-align: center;
+}
+
+#site-head-content {
+	position: relative;
+
+	width: 80%;
+	max-width: 700px;
+	margin: 0 auto;
+
+	color: #ffffff;
+	text-shadow: 0 0 5px #000000;
+
+}
+
+#site-name {
+	margin-bottom: 0;
+	padding-bottom: 0;
+
+	font-family: 'Montserrat Alternates';
+	font-size: 4em;
+}
+
+#site-tagline {
+	margin-top: 0;
+	padding-top: 0;
+
+	font-size: 1em;
+	font-weight: 100;
+}
+
+/* FRONT FOOTER */
+
+#site-footer {
+	position: relative;
+
+	margin: 0;
+	padding: 1rem 0;
+
+	z-index: 2;
+
+	background: #323232;
+
+	font-family: 'Exo 2';
+	font-size: 0.8rem;
+	text-align: center;
+}
+
+#site-footer,
+#site-footer a:link,
+#site-footer a:visited {
+	color: white;
+}
+
+#site-footer a:hover {
+	color: #656565;
+}
+
+/* FRONT BLOCKS */
+
+.front-block {
+	position: relative;
+
+	height: 100%;
+	width: 100%;
+
+	text-align: justify;
+}
+
+.front-block .block {
+	position: relative;
+
+	height: 70%;
+	width: 80%;
+	max-width: 700px;
+
+	margin: 0 auto;
+	padding-bottom: 4em;
+	padding-top: 4em;
+}
+
+.front-block.odd {
+	background: #dadada;
+}
+
+.front-block .next-block {
+	position: absolute;
+	bottom: -40px;
+
+	display: block;
+
+	height: 0;
+	width: 0;
+
+	z-index: 1;
+
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
+	border-top: 50px solid rgb(242, 239, 232);
+	border-radius: 25px;
+}
+
+.front-block:not(.odd) .next-block {
+	right: 6%;
+
+	border-top-color: #ffffff;
+}
+
+.front-block.odd .next-block {
+	left: 6%;
+
+	border-top-color: #dadada;
+}
+
+/* FRONT NAV */
+
+#front-nav {
+	position: fixed;
+	left: 2em;
+	top: 3em;
+
+	display: block;
+}
+
+#front-nav a {
+	display: block;
+}
+
+/* GENERAL CLASSES */
+
+.vertical {
+	display: table-cell;
+	vertical-align: middle;
+}
