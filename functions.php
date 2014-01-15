@@ -1,11 +1,11 @@
 <?php
 
-#Add Theme Support to Additional Functions
+# Add Theme Support to Additional Functions
 add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form' ) );
 
 
-#Add Blocks for Front-page
+# Add Blocks for Front-page
 function scrollato_reg_blocks() {
 	$labels = array(
 		'name'               => __( 'Blocks', 'scrollato' ),
@@ -44,7 +44,7 @@ add_action( 'init', 'scrollato_reg_blocks' );
 
 
 
-#Rearrange Adming Menu
+# Rearrange Admin Menu
 function scrollato_admin_menu() {
 	remove_menu_page( 'edit.php' );
 	remove_menu_page( 'upload.php' );
@@ -63,5 +63,39 @@ function scrollato_order_page() {
 	include( 'admin/order.page.php' );
 }
 
+
+
+# Options
+$opt_list = array(
+	'header-height' => '800px',
+	'header-background-type' => 'image',
+	'header-background-color' => '#000000',
+	'header-background-image' => '',
+	'header-text-maxwidth' => '700px',
+	'header-extra-content' => '',
+	'footer-content' => '<a href="http://filopoe.it/Scrollato/">Scrollato</a> theme by <a href="http://filopoe.it/">Gabriele Girelli</a>',
+	'extra-css' => ''
+);
+foreach ( $opt_list as $opt => $val ) {
+
+	if ( get_option( 'scrollato-' . $opt, 0 ) === 0 ) {
+		add_option( 'scrollato-' . $opt, esc_sql( $val ) );
+	}
+
+}
+
+
+
+# Use Media Library
+function scrollato_admin_scripts() {
+	wp_enqueue_script('media-upload');
+	wp_enqueue_script('thickbox');
+	wp_enqueue_script('jquery');
+}
+function scrollato_admin_styles() {
+	wp_enqueue_style('thickbox');
+}
+add_action('admin_print_scripts', 'scrollato_admin_scripts');
+add_action('admin_print_styles', 'scrollato_admin_styles');
 
 ?>
