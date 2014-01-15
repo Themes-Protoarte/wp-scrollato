@@ -52,11 +52,15 @@ function scrollato_admin_menu() {
 
 	add_menu_page( __( 'Media', 'scrollato' ), __( 'Media', 'scrollato' ), 'manage_options', 'upload.php', '', '', 21 );
 	add_menu_page( __( 'Blocks', 'scrollato' ), __( 'Blocks', 'scrollato' ), 'manage_options', 'edit.php?post_type=block', '', 'dashicons-screenoptions', 19 );
-	add_submenu_page( 'themes.php', __( 'Themes Options', '' ), __( 'Themes Option', '' ), 'manage_options', 'themes_opt', 'scrollato_opt_page' );
+	add_submenu_page( 'themes.php', __( 'Theme Options', '' ), __( 'Theme Option', '' ), 'manage_options', 'theme_opt', 'scrollato_opt_page' );
+	add_submenu_page( 'edit.php?post_type=block', __( 'Order&Style', '' ), __( 'Order&Style', '' ), 'manage_options', 'themes_opt', 'scrollato_order_page' );
 }
 add_action( 'admin_menu', 'scrollato_admin_menu' );
 function scrollato_opt_page() {
 	include( 'admin/options.page.php' );
+}
+function scrollato_order_page() {
+	include( 'admin/order.page.php' );
 }
 
 
