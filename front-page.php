@@ -26,19 +26,19 @@
 
 			?>
 			<div id="" class="front-block<?php if ( $k % 2 == 0 ) { echo " odd"; } ?>">
-				<article class="block">
+				<article id="block-<?php echo $k; ?>" class="block">
 					<?php the_content(); ?>
 				</article>
 				<div class="next-block"></div>
 			</div>
 			<?php
 
+				$navlist .= "<a href='#' class='nav-list' data-ind='$k'>" . get_the_title() . "</a>\n";
 				$k++;
-				$navlist .= "<a class='nav-list' data-ind='$k'>" . get_the_title() . "</a>\n";
 
 			endwhile;  else:  endif; ?>
 			
-			<div id="front-nav"><?php echo $navlist; ?></div>
+			<div id="front-nav" data-0="opacity: 0;" data-<?php echo ((int) get_option( 'scrollato-header-height' )) / 2; ?>="opacity: 0;" data-<?php echo (int) get_option( 'scrollato-header-height' ); ?>="opacity: 1;"><?php echo $navlist; ?></div>
 		</main>
 
 		<footer id="site-footer"><a href="http://filopoe.it/Scrollato/">Scrollato</a> theme by <a href="http://filopoe.it/">Gabriele Girelli</a></footer>
