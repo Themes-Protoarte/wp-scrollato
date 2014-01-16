@@ -5,7 +5,7 @@
 				<div id="site-head-content">
 					<h1 id="site-name"><?php bloginfo( 'name' ); ?></h1>
 					<h3 id="site-tagline"><?php bloginfo( 'description' ); ?></h3>
-					<div class="extra"><?php echo stripslasges( get_option( 'scrollato-header-extra-content' ) ); ?></div>
+					<div class="extra"><?php echo stripslashes( get_option( 'scrollato-header-extra-content' ) ); ?></div>
 				</div>
 			</div>
 		</header>
