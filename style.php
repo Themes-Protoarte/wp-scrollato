@@ -66,7 +66,7 @@ header("Content-type: text/css; charset: UTF-8");
 }
 
 .front-block.odd .block a:hover {
-	color: <?php echo get_option( 'scrollato-block-odd-a-hover-color' ); ?>
+	color: <?php echo scrollato( 'get_option-block-odd-a-hover-color' ); ?>
 }
 
 /* FRONT NAV */
@@ -79,3 +79,7 @@ header("Content-type: text/css; charset: UTF-8");
 #front-nav a:hover {
 	color: <?php echo get_option( 'scrollato-nav-a-hover-color' ); ?>;
 }
+
+/* EXTRA CSS */
+
+<?php echo get_option( 'scrollato-extra-css' ); ?>
