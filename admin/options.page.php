@@ -92,7 +92,7 @@ if ( isset( $_POST[ 'saving' ] ) and @$_POST[ 'saving' ] == "y" ) {
 		</tr>
 		<tr>
 			<td class="label"><label for="header-text-color">Header text color: </label></td>
-			<td><input type="text" class="color-input" id="header-text-color" name="header-text-color" size="10" value="<?php echo get_option( 'scrollato-header-text-color' ); ?>" /><div class="color-sample"></div></td>
+			<td><input type="text" class="color-input" id="header-text-color" name="header-text-color" size="10" value="<?php echo get_option( 'scrollato-header-text-color' ); ?>" /></td>
 		</tr>
 		<tr>
 			<td class="label"><label for="header-extra-content" style="vertical-align: top;"><?php _e( 'Header extra content', 'scrollato' ); ?>: </label></td>
@@ -113,32 +113,32 @@ if ( isset( $_POST[ 'saving' ] ) and @$_POST[ 'saving' ] == "y" ) {
 			<td colspan="2">
 				<table width="100%">
 					<tr>
-						<td colspan="2" style="text-align: center; font-size: 1.15em; padding: 0.1em;"><b>Even blocks</b></td>
-						<td colspan="2" style="text-align: center; font-size: 1.15em; padding: 0.1em;"><b>Odd blocks</b></td>
+						<td colspan="2" style="text-align: left; font-size: 1.15em; padding: 0.1em; padding-left: 5em;"><b>Even blocks</b></td>
+						<td colspan="2" style="text-align: left; font-size: 1.15em; padding: 0.1em; padding-left: 5em;"><b>Odd blocks</b></td>
 					</tr>
 					<tr>
 						<td class="label"><label for="block-even-bgcolor"><?php _e( 'Bgcolor', 'scrollato' ); ?>: </label></td>
-						<td><input type="text" id="block-even-bgcolor" class="color-input" name="block-even-bgcolor" value="<?php echo get_option( 'scrollato-block-even-bgcolor' ); ?>" size="10"><div class="color-sample"></div></td>
+						<td class="color-input-wrap"><input type="text" id="block-even-bgcolor" class="color-input" name="block-even-bgcolor" value="<?php echo get_option( 'scrollato-block-even-bgcolor' ); ?>" size="10"></td>
 						<td class="label"><label for="block-odd-bgcolor"><?php _e( 'Bgcolor', 'scrollato' ); ?>: </label></td>
-						<td><input type="text" id="block-odd-bgcolor" class="color-input" name="block-odd-bgcolor" value="<?php echo get_option( 'scrollato-block-odd-bgcolor' ); ?>" size="10"><div class="color-sample"></div></td>
+						<td class="color-input-wrap"><input type="text" id="block-odd-bgcolor" class="color-input" name="block-odd-bgcolor" value="<?php echo get_option( 'scrollato-block-odd-bgcolor' ); ?>" size="10"></td>
 					</tr>
 					<tr>
 						<td class="label"><label for="block-even-color"><?php _e( 'Color', 'scrollato' ); ?>: </label></td>
-						<td><input type="text" class="color-input" id="block-even-color" name="block-even-color" value="<?php echo get_option( 'scrollato-block-even-color' ); ?>" size="10"><div class="color-sample"></div></td>
+						<td class="color-input-wrap"><input type="text" class="color-input" id="block-even-color" name="block-even-color" value="<?php echo get_option( 'scrollato-block-even-color' ); ?>" size="10"></td>
 						<td class="label"><label for="block-odd-color"><?php _e( 'Color', 'scrollato' ); ?>: </label></td>
-						<td><input type="text" class="color-input" id="block-odd-color" name="block-odd-color" value="<?php echo get_option( 'scrollato-block-odd-color' ); ?>" size="10"><div class="color-sample"></div></td>
+						<td class="color-input-wrap"><input type="text" class="color-input" id="block-odd-color" name="block-odd-color" value="<?php echo get_option( 'scrollato-block-odd-color' ); ?>" size="10"></td>
 					</tr>
 					<tr>
 						<td class="label"><label for="block-even-a-color"><?php _e( 'Link color', 'scrollato' ); ?>: </label></td>
-						<td><input type="text" class="color-input" id="block-even-a-color" name="block-even-a-color" value="<?php echo get_option( 'scrollato-block-even-a-color' ); ?>" size="10" /><div class="color-sample"></div></td>
+						<td class="color-input-wrap"><input type="text" class="color-input" id="block-even-a-color" name="block-even-a-color" value="<?php echo get_option( 'scrollato-block-even-a-color' ); ?>" size="10" /></td>
 						<td class="label"><label for="block-odd-a-color"><?php _e( 'Link color', 'scrollato' ); ?>: </label></td>
-						<td><input type="text" class="color-input" id="block-odd-a-color" name="block-odd-a-color" value="<?php echo get_option( 'scrollato-block-odd-a-color' ); ?>" size="10" /><div class="color-sample"></div></td>
+						<td class="color-input-wrap"><input type="text" class="color-input" id="block-odd-a-color" name="block-odd-a-color" value="<?php echo get_option( 'scrollato-block-odd-a-color' ); ?>" size="10" /></td>
 					</tr>
 					<tr>
 						<td class="label"><label for="block-even-a-hover-color"><?php _e( 'Link-hover color', 'scrollato' ); ?>: </label></td>
-						<td><input type="text" class="color-input" id="block-even-a-hover-color" name="block-even-a-hover-color" value="<?php echo get_option( 'scrollato-block-even-a-hover-color' ); ?>" size="10" /><div class="color-sample"></div></td>
+						<td class="color-input-wrap"><input type="text" class="color-input" id="block-even-a-hover-color" name="block-even-a-hover-color" value="<?php echo get_option( 'scrollato-block-even-a-hover-color' ); ?>" size="10" /></td>
 						<td class="label"><label for="block-odd-a-hover-color"><?php _e( 'Link-hover color', 'scrollato' ); ?>: </label></td>
-						<td><input type="text" class="color-input" id="block-odd-a-hover-color" name="block-odd-a-hover-color" value="<?php echo get_option( 'scrollato-block-odd-a-hover-color' ); ?>" size="10" /><div class="color-sample"></div></td>
+						<td class="color-input-wrap"><input type="text" class="color-input" id="block-odd-a-hover-color" name="block-odd-a-hover-color" value="<?php echo get_option( 'scrollato-block-odd-a-hover-color' ); ?>" size="10" /></td>
 					</tr>
 				</table>
 			</td>
@@ -148,7 +148,7 @@ if ( isset( $_POST[ 'saving' ] ) and @$_POST[ 'saving' ] == "y" ) {
 		</tr>
 		<tr>
 			<td class="label"><label for="nav-bgcolor"><?php _e( 'Nav background', 'scrollato' ); ?>: </label></td>
-			<td><input type="text" id="nav-bgcolor" name="nav-bgcolor" class="color-input" value="<?php echo get_option( 'scrollato-nav-bgcolor' ); ?>" /> <div class="color-sample"></div></td>
+			<td><input type="text" id="nav-bgcolor" name="nav-bgcolor" class="color-input" value="<?php echo get_option( 'scrollato-nav-bgcolor' ); ?>" /></td>
 		</tr>
 		<tr>
 			<td class="label"><label for="nav-box-shadow"><?php _e( 'Nav shadow', 'scrollato' ); ?>: </label></td>
@@ -156,11 +156,11 @@ if ( isset( $_POST[ 'saving' ] ) and @$_POST[ 'saving' ] == "y" ) {
 		</tr>
 		<tr>
 			<td class="label"><label for="nav-a-color"><?php _e( 'Nav link color', 'scrollato' ); ?>: </label></td>
-			<td><input type="text" id="nav-a-color" class="color-input" name="nav-a-color" value="<?php echo get_option( 'scrollato-nav-a-color' ); ?>" /><div class="color-sample"></div></td>
+			<td><input type="text" id="nav-a-color" class="color-input" name="nav-a-color" value="<?php echo get_option( 'scrollato-nav-a-color' ); ?>" /></td>
 		</tr>
 		<tr>
 			<td class="label"><label for="nav-a-hover-color"><?php _e( 'Nav link-hover color', 'scrollato' ); ?>: </label></td>
-			<td><input type="text" id="nav-a-hover-color" class="color-input" name="nav-a-hover-color" value="<?php echo get_option( 'scrollato-nav-a-hover-color' ); ?>" /><div class="color-sample"></div></td>
+			<td><input type="text" id="nav-a-hover-color" class="color-input" name="nav-a-hover-color" value="<?php echo get_option( 'scrollato-nav-a-hover-color' ); ?>" /></td>
 		</tr>
 		<tr>
 			<td colspan="2"><h3><?php _e( 'Footer Options', 'scrollato' ); ?></h3></td>

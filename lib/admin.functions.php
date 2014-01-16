@@ -228,6 +228,10 @@ function scrollato_admin_enqueue()
 {
     wp_register_style( 'scrollato_admin_style', get_template_directory_uri() . '/css/block_edit.css', null, null, 'all' );
     wp_enqueue_style( 'scrollato_admin_style' );
+
+    // Color picker
+    wp_enqueue_style( 'wp-color-picker' );
+    wp_enqueue_script( 'scrollato-color-picker-handle', get_template_directory_uri() . '/js/color-picker.js', array( 'wp-color-picker' ), false, true );
 }
 add_action( 'admin_enqueue_scripts', 'scrollato_admin_enqueue' );
 

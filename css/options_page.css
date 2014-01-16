@@ -22,20 +22,15 @@ table .label {
 	text-align: center;
 }
 
-.color-sample {
-	display: inline-block;
-
-	margin-left: 0.5em;
-
-	height: 1.5em;
-	width: 1.5em;
-
-	background-color: black;
-	border: 1px solid;
-
+.color-input {
 	vertical-align: middle;
 }
 
-.color-input {
-	vertical-align: middle;
+.iris-picker.iris-mozilla.iris-border {
+    position: absolute;
+    z-index: 5;
+}
+
+.color-input-wrap {
+	width: 420px;
 }

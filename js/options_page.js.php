@@ -15,6 +15,7 @@ require_once( dirname(dirname(__FILE__)) . "/lib/options_page.lib.php" );
 				$("#header-background-option .color-input").change(function() {
 					$("#header-background-option .color-input").siblings('.color-sample').css( { 'background-color' : $("#header-background-option .color-input").val() } );
 				});
+				$('#header-background-option .color-input').wpColorPicker();
 
 			} else if ( $("#header-background-type").val() == 'image' ) {
 				$("#header-background-option").html("<?php echo backgroundImageRow(); ?>");
