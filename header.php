@@ -18,7 +18,12 @@
 		<?php wp_head(); ?>
 	    <script type="text/javascript">
 		    $(document).ready(function() {
-		    	var s = skrollr.init();
+		    	var s = skrollr.init({
+		    		smoothScrolling: true,
+		    		smoothScrollingDuration: 200,
+		    		forceHeight: false,
+		    		mobileDeceleration: 0.004
+		    	});
 		    });
 	    </script>
 	</head>
