@@ -27,14 +27,28 @@
 
 			if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
 
+				if ( ( $query->current_post + 1 ) == $query->post_count ) {
 			?>
-			<div id="" class="front-block<?php if ( $k % 2 == 0 ) { echo " odd"; } ?>">
+			<div id="front-block-<?php the_ID(); ?>" class="front-block<?php if ( $k % 2 == 0 ) { echo " odd"; } ?>">
 				<article id="block-<?php echo $k; ?>" class="block">
 					<?php the_content(); ?>
 				</article>
 				<div class="next-block"></div>
 			</div>
 			<?php
+
+				} else {
+
+			?>
+			<div id="front-block-<?php the_ID(); ?>" class="front-block<?php if ( $k % 2 == 0 ) { echo " odd"; } ?>" data-300-top="<?php the_field( 'data-start' ); ?>" data-300-top-bottom="<?php the_field( 'data-end' ); ?>">
+				<article id="block-<?php echo $k; ?>" class="block">
+					<?php the_content(); ?>
+				</article>
+				<div class="next-block"></div>
+			</div>
+			<?php
+
+				}
 
 				$navlist .= "<a href='#' class='nav-list' data-ind='$k'>" . get_the_title() . "</a>\n";
 				$k++;
