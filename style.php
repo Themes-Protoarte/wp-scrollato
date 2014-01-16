@@ -66,10 +66,14 @@ header("Content-type: text/css; charset: UTF-8");
 }
 
 .front-block.odd .block a:hover {
-	color: <?php echo scrollato( 'get_option-block-odd-a-hover-color' ); ?>
+	color: <?php echo get_option( 'scrollato-block-odd-a-hover-color' ); ?>
 }
 
 /* FRONT NAV */
+
+#front-nav {
+	background-color: <?php echo get_option( 'scrollato-nav-bgcolor' ); ?>;
+}
 
 #front-nav a:link,
 #front-nav a:visited {

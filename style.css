@@ -178,10 +178,14 @@ body {
 
 #front-nav {
 	position: fixed;
-	left: 2em;
-	top: 3em;
+	left: -0.5em;
+	top: 0.5em;
 
 	display: block;
+
+	padding: 1.5em;
+
+	box-shadow: 1px 1px 2px #323232;
 }
 
 #front-nav a {

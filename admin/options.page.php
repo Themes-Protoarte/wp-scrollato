@@ -20,6 +20,7 @@ $opt_list = array(
 	'block-odd-a-color',
 	'block-even-a-hover-color',
 	'block-odd-a-hover-color',
+	'nav-bgcolor',
 	'nav-a-color',
 	'nav-a-hover-color',
 	'footer-content',
@@ -119,6 +120,10 @@ if ( isset( $_POST[ 'saving' ] ) and @$_POST[ 'saving' ] == "y" ) {
 		</tr>
 		<tr>
 			<td colspan="2"><h3><?php _e( 'Nav Options', 'scrollato' ); ?></h3></td>
+		</tr>
+		<tr>
+			<td class="label"><label for="nav-bgcolor"><?php _e( 'Nav background', 'scrollato' ); ?>: </label></td>
+			<td><input type="text" id="nav-bgcolor" name="nav-bgcolor" class="color-input" value="<?php echo get_option( 'scrollato-nav-bgcolor' ); ?>" /> <div class="color-sample"></div></td>
 		</tr>
 		<tr>
 			<td class="label"><label for="nav-a-color"><?php _e( 'Nav link color', 'scrollato' ); ?>: </label></td>
