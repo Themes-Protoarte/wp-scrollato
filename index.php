@@ -1,1 +1,1 @@
-The main template
+<?php include( 'front-page.php' ); ?>

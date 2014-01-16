@@ -13,6 +13,8 @@ $opt_list = array(
 	'header-text-maxwidth',
 	'header-text-color',
 	'header-extra-content',
+	'header-skrollr-start',
+	'header-skrollr-end',
 	'block-even-bgcolor',
 	'block-odd-bgcolor',
 	'block-even-color',
@@ -88,12 +90,20 @@ if ( isset( $_POST[ 'saving' ] ) and @$_POST[ 'saving' ] == "y" ) {
 			<td><input type="text" size="5" id="header-text-maxwidth" name="header-text-maxwidth" value="<?php echo get_option( 'scrollato-header-text-maxwidth' ); ?>" /></td>
 		</tr>
 		<tr>
-			<td><label for="header-text-color">Header text color: </label></td>
+			<td class="label"><label for="header-text-color">Header text color: </label></td>
 			<td><input type="text" class="color-input" id="header-text-color" name="header-text-color" size="10" value="<?php echo get_option( 'scrollato-header-text-color' ); ?>" /><div class="color-sample"></div></td>
 		</tr>
 		<tr>
 			<td class="label"><label for="header-extra-content" style="vertical-align: top;"><?php _e( 'Header extra content', 'scrollato' ); ?>: </label></td>
 			<td><textarea name="header-extra-content" id="header-extra-content" cols="80" rows="6"><?php echo stripslashes( get_option( 'scrollato-header-extra-content' ) ); ?></textarea></td>
+		</tr>
+		<tr>
+			<td class="label"><label for="header-skrollr-start"><?php _e( 'Header skrollr start', 'scrollato' ); ?>: </label></td>
+			<td><input type="text" id="header-skrollr-start" name="header-skrollr-start" size="100" value="<?php echo get_option( 'scrollato-header-skrollr-start' ); ?>" /></td>
+		</tr>
+		<tr>
+			<td class="label"><label for="header-skrollr-end"><?php _e( 'Header skrollr end', 'scrollato' ); ?>: </label></td>
+			<td><input type="text" id="header-skrollr-end" name="header-skrollr-end" size="100" value="<?php echo get_option( 'scrollato-header-skrollr-end' ); ?>" /></td>
 		</tr>
 		<tr>
 			<td colspan="2"><h3><?php _e( 'Blocks Options', 'scrollato' ); ?></h3></td>
