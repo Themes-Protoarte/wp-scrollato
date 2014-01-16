@@ -42,6 +42,7 @@ $opt_list = array(
 	'block-even-a-hover-color' => '#656565',
 	'block-odd-a-hover-color' => '#656565',
 	'nav-bgcolor' => 'white',
+	'nav-box-shadow' => '1px 1px 2px #323232',
 	'nav-a-color' => '#121212',
 	'nav-a-hover-color' => '#ffffff',
 	'footer-content' => '<a href="http://filopoe.it/Scrollato/">Scrollato</a> theme by <a href="http://filopoe.it/">Gabriele Girelli</a>',

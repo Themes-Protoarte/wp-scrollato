@@ -3,10 +3,11 @@ Theme Name: Scrollato
 Theme URI: http://filopoe.it/Scrollato/
 Author: Gabriele Girelli
 Author URI: http://filopoe.it/
-Description: 
+Description: A simple front-page Wordpress theme
+Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: 
+Tags: parallax, front-page, page, no-posts, customizable
 Text Domain: scrollato
 
 This theme, like WordPress, is licensed under the GPL.
@@ -179,13 +180,13 @@ body {
 #front-nav {
 	position: fixed;
 	left: -0.5em;
-	top: 0.5em;
+	top: 1em;
 
 	display: block;
 
 	padding: 1.5em;
 
-	box-shadow: 1px 1px 2px #323232;
+	z-index: 3;
 }
 
 #front-nav a {

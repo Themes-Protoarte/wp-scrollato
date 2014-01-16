@@ -74,6 +74,7 @@ header("Content-type: text/css; charset: UTF-8");
 
 #front-nav {
 	background-color: <?php echo get_option( 'scrollato-nav-bgcolor' ); ?>;
+	box-shadow: <?php echo get_option( 'scrollato-nav-box-shadow' ); ?>;
 }
 
 #front-nav a:link,
