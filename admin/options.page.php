@@ -5,6 +5,7 @@ require_once( dirname(dirname(__FILE__)) . "/js/options_page.js.php" );
 
 // Save options
 $opt_list = array(
+	'header-display',
 	'header-height',
 	'header-background-type',
 	'header-background-color',
@@ -40,6 +41,19 @@ if ( isset( $_POST[ 'saving' ] ) and @$_POST[ 'saving' ] == "y" ) {
 	<table>
 		<tr>
 			<td colspan="2"><h3><?php _e( 'Header Options', 'scrollato' ); ?></h3></td>
+		</tr>
+		<tr>
+			<td class="label"><label for="header-display"><?php _e( 'Header display', 'scrollato' ); ?>: </label></td>
+			<td>
+				<select name="header-display" id="header-display">
+					<option value="0"<?php
+						if ( "0" == get_option( 'scrollato-header-display' ) ) { echo ' selected'; }
+					?>><?php _e( 'Hidden', 'scrollato' ); ?></option>
+					<option value="1"<?php
+						if ( "1" == get_option( 'scrollato-header-display' ) ) { echo ' selected'; }
+					?>><?php _e( 'Normal', 'scrollato' ); ?></option>
+				</select>
+			</td>
 		</tr>
 		<tr>
 			<td class="label"><label for="header-height"><?php _e( 'Header height', 'scrollato' ); ?>: </label></td>

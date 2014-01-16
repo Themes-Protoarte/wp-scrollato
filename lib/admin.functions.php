@@ -15,7 +15,7 @@ function scrollato_admin_menu() {
 }
 add_action( 'admin_menu', 'scrollato_admin_menu' );
 function scrollato_opt_page() {
-	include( 'admin/options.page.php' );
+	include( dirname(dirname(__FILE__)) . '/admin/options.page.php' );
 }
 
 

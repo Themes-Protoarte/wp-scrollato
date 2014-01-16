@@ -5,6 +5,7 @@ header("Content-type: text/css; charset: UTF-8");
 /* FRONT HEADER */
 
 #site-head {
+	<?php if ( '0' == get_option( 'scrollato-header-display' ) ) { echo 'display: none;'; } ?>
 	height: <?php echo get_option( 'scrollato-header-height' ); ?>;
 
 	color: <?php echo get_option( 'scrollato-header-text-color' ); ?>;

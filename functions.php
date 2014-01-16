@@ -23,6 +23,7 @@ require_once( 'lib/admin.functions.php' );
 ###########
 
 $opt_list = array(
+	'header-display' => '1',
 	'header-height' => '800px',
 	'header-background-type' => 'image',
 	'header-background-color' => '#000000',
