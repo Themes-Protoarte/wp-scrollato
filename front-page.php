@@ -5,7 +5,7 @@
 				<div id="site-head-content">
 					<h1 id="site-name"><?php bloginfo( 'name' ); ?></h1>
 					<h3 id="site-tagline"><?php bloginfo( 'description' ); ?></h3>
-					<div class="extra"><?php echo get_option( 'scrollato-header-extra-content' ); ?></div>
+					<div class="extra"><?php echo stripslasges( get_option( 'scrollato-header-extra-content' ) ); ?></div>
 				</div>
 			</div>
 		</header>
@@ -42,6 +42,6 @@
 			<div id="front-nav" data-0="opacity: 0;" data-<?php echo ((int) get_option( 'scrollato-header-height' )) / 2; ?>="opacity: 0;" data-<?php echo (int) get_option( 'scrollato-header-height' ); ?>="opacity: 1;"><?php echo $navlist; ?></div>
 		</main>
 
-		<footer id="site-footer"><?php echo get_option( 'scrollato-footer-content' ); ?></footer>
+		<footer id="site-footer"><?php echo stripslashes( get_option( 'scrollato-footer-content' ) ); ?></footer>
 
 <?php get_footer(); ?>
