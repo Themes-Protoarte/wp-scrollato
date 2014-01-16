@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-		<header id="site-head" data-top-top="<?php echo get_option( 'scrollato-header-skrollr-start' ); ?>" data-top-bottom="<?php echo get_option( 'scrollato-header-skrollr-end' ); ?>">
+		<header id="site-head" data-0-top-top="<?php echo get_option( 'scrollato-header-skrollr-start' ); ?>" data-top-bottom="<?php echo get_option( 'scrollato-header-skrollr-end' ); ?>">
 			<div class="vertical">
 				<div id="site-head-content">
 					<h1 id="site-name"><?php bloginfo( 'name' ); ?></h1>
@@ -16,6 +16,8 @@
 			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 			$query = new WP_Query( array(
 				'post_type' => 'block',
+				'meta_key' => 'position',
+				'orderby' => 'meta_value_num',
 				'order' => 'ASC'
 			));
 
@@ -39,7 +41,7 @@
 
 			endwhile;  else:  endif; ?>
 			
-			<div id="front-nav" data-top-top="opacity: 0;" data-<?php echo ((int) get_option( 'scrollato-header-height' )) / 2; ?>="opacity: 0;" data-<?php echo (int) get_option( 'scrollato-header-height' ); ?>="opacity: 1;"><?php echo $navlist; ?></div>
+			<div id="front-nav" data-0="opacity: 0;" data-<?php echo ((int) get_option( 'scrollato-header-height' )) / 2; ?>="opacity: 0;" data-<?php echo (int) get_option( 'scrollato-header-height' ); ?>="opacity: 1;"><?php echo $navlist; ?></div>
 		</main>
 
 		<footer id="site-footer"><?php echo stripslashes( get_option( 'scrollato-footer-content' ) ); ?></footer>
