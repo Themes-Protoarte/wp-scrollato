@@ -5,6 +5,7 @@ require_once( dirname(dirname(__FILE__)) . "/js/options_page.js.php" );
 
 // Save options
 $opt_list = array(
+	'favicon',
 	'header-display',
 	'header-height',
 	'header-background-type',
@@ -42,6 +43,22 @@ if ( isset( $_POST[ 'saving' ] ) and @$_POST[ 'saving' ] == "y" ) {
 <div class="wrap"><form method="post"><input type="hidden" id="saving" name="saving" value="y" />
 	<h2><?php _e( 'Theme Options', 'scrollato' ); ?></h2>
 	<table>
+		<tr>
+			<td colspan="2"><h3><?php _e( 'General Options', 'scrollato' ); ?></h3></td>
+		</tr>
+		<tr>
+			<td class="label"><label for="favicon-media"><?php _e( 'Favicon', 'scrollato' ); ?>: </label></td>
+			<td>
+				<?php
+					if ( get_option( 'scrollato-header-background-image' ) != "" ) {
+						echo "<img id='upload_logo_preview' src='" . get_option( 'scrollato-favicon' ) . "' style='padding: 2px; max-height: 150px; max-width: 500px; background-color: white; border: 1px solid #989898;' /><br />";
+					}
+				?>
+				<input type='text' id='favicon' name='favicon' size='30' value='<?php echo get_option( 'scrollato-favicon' ); ?>' />
+				<input type='button' id='favicon-media' class='button action upload_image_button' name='favicon-media' value='<?php _e( 'Upload favicon', 'scrollato' ); ?>' />
+				<input type='button' class='button action' id='favicon-default' value='<?php _e( 'Default', 'scrollato' ); ?>' />
+			</td>
+		</tr>
 		<tr>
 			<td colspan="2"><h3><?php _e( 'Header Options', 'scrollato' ); ?></h3></td>
 		</tr>

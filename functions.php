@@ -23,6 +23,7 @@ require_once( 'lib/admin.functions.php' );
 ###########
 
 $opt_list = array(
+	'favicon' => get_template_directory_uri() . '/favicon.ico',
 	'header-display' => '1',
 	'header-height' => '800px',
 	'header-background-type' => 'image',

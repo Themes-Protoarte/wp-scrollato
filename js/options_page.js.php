@@ -28,26 +28,36 @@ require_once( dirname(dirname(__FILE__)) . "/lib/options_page.lib.php" );
 			
 		});
 
-		// Use Media Library to upload
-		$('#header-background-image-media').click(function() {  
-			tb_show( 'Upload a logo', 'media-upload.php?type=image&TB_iframe=true' );  
-			return false;  
+
+		var upload_image_button = false;
+		jQuery('.upload_image_button').click(function() {
+			upload_image_button = true;
+			formfieldID = jQuery(this).prev().attr( "id" );
+			formfield = jQuery( "#" + formfieldID ).attr( 'name' );
+			tb_show('', 'media-upload.php?type=image&amp;TB_iframe=true');
+			if( upload_image_button == true ) {
+
+				var oldFunc = window.send_to_editor;
+				window.send_to_editor = function(html) {
+
+					imgurl = jQuery( 'img', html ).attr( 'src' );
+					jQuery( "#" + formfieldID ).val( imgurl );
+					jQuery( "#" + formfieldID ).siblings('#upload_logo_preview').attr('src',imgurl);  
+					tb_remove();
+					window.send_to_editor = oldFunc;
+				}
+			}
+			upload_image_button=false;
 		});
-
-		// Send chosen uri to correct input
-		window.send_to_editor = function(html) {  
-			var image_url = $('img',html).attr('src');  
-			$('#header-background-image').val(image_url);  
-			tb_remove();  
-			$('#upload_logo_preview img').attr('src',image_url);  
-
-			$('#submit_options_form').trigger('click');  
-		} 
 
 		// Restore Default Image
 		$("#header-background-image-default").click(function() {
-			$("#header-background-option td img").remove();
+			$("#header-background-image").siblings('#upload_logo_preview').attr( 'src', "<?php echo get_template_directory_uri() . '/imgs/Red_geranium_by_qerubin.jpg'; ?>" );
 			$("#header-background-image").val("<?php echo get_template_directory_uri() . '/imgs/Red_geranium_by_qerubin.jpg'; ?>");
+		});
+		$("#favicon-default").click(function() {
+			$("#favicon").siblings('#upload_logo_preview').attr( 'src', "<?php echo get_template_directory_uri() . '/favicon.ico'; ?>" );
+			$("#favicon").val("<?php echo get_template_directory_uri() . '/favicon.ico'; ?>");
 		});
 
 		// Color sampling
