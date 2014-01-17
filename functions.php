@@ -86,6 +86,10 @@ add_action('wp_ajax_dynamic_css', 'dynamic_css');
 add_action('wp_ajax_nopriv_dynamic_css', 'dynamic_css');
 
 function scrollato_dynamic_js() {
+	wp_deregister_script('jquery');
+	wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-latest.min.js", false, null);
+	wp_enqueue_script('jquery');
+
     wp_register_script( 'dynamic-js', get_template_directory_uri() . "/js/front-page.js.php" );
     wp_register_script( 'skrollr', get_template_directory_uri() . "/js/skrollr.js" );
     wp_register_script( 'scrollto', get_template_directory_uri() . "/js/scrollto.min.js" );
@@ -94,5 +98,11 @@ function scrollato_dynamic_js() {
     wp_enqueue_script( 'scrollto' );
 }
 add_action('wp_enqueue_scripts', 'scrollato_dynamic_js');
+
+
+if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
+function my_jquery_enqueue() {
+
+}
 
 ?>
