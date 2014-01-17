@@ -26,4 +26,4 @@
 		    });
 	    </script>
 	</head>
-	<body <?php body_class(); ?>>
+	<body id="skrollr-body" <?php body_class(); ?>>
