@@ -20,14 +20,10 @@ header("Content-type: text/css; charset: UTF-8");
 	?>background-image: url('<?php echo get_option( 'scrollato-header-background-image' ); ?>');
 	background-attachment: scroll;
 	background-position: center center;
-    -webkit-background-size: 100%; 
-    -moz-background-size: 100%; 
-    -o-background-size: 100%; 
-    background-size: 100%; 
-    -webkit-background-size: cover; 
-    -moz-background-size: cover; 
-    -o-background-size: cover; 
-    background-size: cover; 
+    -webkit-background-size: 2000px auto;
+    -moz-background-size: 2000px auto;
+    -o-background-size: 2000px auto;
+    background-size: 2000px auto;
 	<?php
 			break;
 		}

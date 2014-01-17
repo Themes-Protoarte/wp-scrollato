@@ -25,5 +25,6 @@
 		    	});
 		    });
 	    </script>
+	    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsive.css" type="text/css" media="screen" />
 	</head>
 	<body id="skrollr-body" <?php body_class(); ?>>
