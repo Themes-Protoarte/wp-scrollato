@@ -45,7 +45,7 @@ $opt_list = array(
 	'nav-box-shadow' => '1px 1px 2px #323232',
 	'nav-a-color' => '#121212',
 	'nav-a-hover-color' => '#aa1e14',
-	'footer-content' => '<a href="http://filopoe.it/Scrollato/">Scrollato</a> theme by <a href="http://filopoe.it/">Gabriele Girelli</a>',
+	'footer-content' => '<a href="http://filopoe.it/themes/Scrollato/">Scrollato</a> theme by <a href="http://filopoe.it/">Gabriele Girelli</a>',
 	'extra-css' => ''
 );
 foreach ( $opt_list as $opt => $val ) {
