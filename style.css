@@ -15,24 +15,23 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 @font-face {
-  font-family: 'Montserrat Alternates';
-  font-style: normal;
-  font-weight: 400;
-  src: local('MontserratAlternates-Regular'), url(http://themes.googleusercontent.com/static/fonts/montserratalternates/v2/z2n1Sjxk9souK3HCtdHukiVz4wwEV01Tv2kxNh88JXM.woff) format('woff');
-}
-@font-face {
   font-family: 'Exo 2';
   font-style: normal;
   font-weight: 400;
   src: local('Exo 2'), local('Exo2-Regular'), url(http://themes.googleusercontent.com/static/fonts/exo2/v1/8C2PVL2WIMUnPF90ukjrZQ.woff) format('woff');
 }
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Lobster';
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto Regular'), local('Roboto-Regular'), url(http://themes.googleusercontent.com/static/fonts/roboto/v10/2UX7WLTfW3W8TclTUvlFyQ.woff) format('woff');
+  src: local('Lobster Two'), local('LobsterTwo'), url(http://themes.googleusercontent.com/static/fonts/lobstertwo/v5/Law3VVulBOoxyKPkrNsAaIbN6UDyHWBl620a-IRfuBk.woff) format('woff');
 }
-
+@font-face {
+  font-family: 'Andika';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Andika'), url(http://themes.googleusercontent.com/static/fonts/andika/v4/7oCWhqd1EPSqB7_cG3_eAA.woff) format('woff');
+}
 
 
 body,
@@ -43,8 +42,8 @@ html {
 	margin: 0;
 	padding: 0;
 
-	font-family: "Roboto";
-	font-size: 16px;
+	font-family: "Andika";
+	font-size: 20px;
 }
 
 body {
@@ -80,8 +79,9 @@ body {
 	margin-bottom: 0;
 	padding-bottom: 0;
 
-	font-family: 'Montserrat Alternates';
+	font-family: 'Lobster';
 	font-size: 4em;
+	font-weight: normal;
 }
 
 #site-tagline {
@@ -90,6 +90,22 @@ body {
 
 	font-size: 1em;
 	font-weight: 100;
+}
+
+.scrollato-button {
+	padding: 0.4em 0.8em;
+
+	background-color: #aa1e14;
+	border-radius: 0.5em;
+	border-bottom: 2px solid #9b1111;
+
+	color: white;
+	text-decoration: none;
+}
+
+.scrollato-button:hover {
+	background-color: #9b1111;
+	border-bottom: 2px solid #aa1e14;
 }
 
 /* FRONT FOOTER */
@@ -116,7 +132,7 @@ body {
 }
 
 #site-footer a:hover {
-	color: #656565;
+	color: #aa1e14;
 }
 
 /* FRONT BLOCKS */
@@ -175,6 +191,29 @@ body {
 	border-top-color: #dadada;
 }
 
+.front-block .block h1 {
+	margin: 0.4em 0;
+	font-size: 2.1em;
+}
+
+.front-block .block h2 {
+	margin: 0.4em 0;
+	font-size: 1.6em;
+}
+
+.front-block .block h3 {
+	margin: 0.3em 0;
+	font-size: 1.3em;
+}
+
+.front-block .block p {
+	margin: 0.2em 0;
+}
+
+.front-block .block ul {
+	margin-top: 0;
+}
+
 /* FRONT NAV */
 
 #front-nav {
@@ -186,11 +225,15 @@ body {
 
 	padding: 1.5em;
 
+	font-family: 'Exo 2';
+	font-size: 0.8rem;
+
 	z-index: 3;
 }
 
 #front-nav a {
 	display: block;
+	text-decoration: none;
 }
 
 /* GENERAL CLASSES */
