@@ -22,7 +22,6 @@
 		    		smoothScrolling: true,
 		    		smoothScrollingDuration: 300,
 		    		forceHeight: false,
-		    		mobileDeceleration: 0.004
 		    	});
 		    });
 	    </script>

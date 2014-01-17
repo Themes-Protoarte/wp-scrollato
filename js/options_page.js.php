@@ -28,7 +28,6 @@ require_once( dirname(dirname(__FILE__)) . "/lib/options_page.lib.php" );
 			
 		});
 
-
 		var upload_image_button = false;
 		jQuery('.upload_image_button').click(function() {
 			upload_image_button = true;
