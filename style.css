@@ -92,22 +92,6 @@ body {
 	font-weight: 100;
 }
 
-.scrollato-button {
-	padding: 0.4em 0.8em;
-
-	background-color: #aa1e14;
-	border-radius: 0.5em;
-	border-bottom: 2px solid #9b1111;
-
-	color: white;
-	text-decoration: none;
-}
-
-.scrollato-button:hover {
-	background-color: #9b1111;
-	border-bottom: 2px solid #aa1e14;
-}
-
 /* FRONT FOOTER */
 
 #site-footer {
@@ -132,7 +116,7 @@ body {
 }
 
 #site-footer a:hover {
-	color: #aa1e14;
+	color: #bbbbbb;
 }
 
 /* FRONT BLOCKS */
@@ -241,4 +225,39 @@ body {
 .vertical {
 	display: table-cell;
 	vertical-align: middle;
+}
+
+.scrollato-button {
+	padding: 0.4em 0.8em;
+
+	background-color: #aa1e14;
+	border-radius: 0.5em;
+	border-bottom: 2px solid #9b1111;
+
+	color: white;
+	text-decoration: none;
+}
+
+.scrollato-button:hover {
+	background-color: #9b1111;
+	border-bottom: 2px solid #aa1e14;
+}
+
+.front-block:not(.odd) .scrollato-button {
+	display: block;
+
+	width: 90px;
+
+	margin: 0.5em auto;
+
+	background-color: #e0e0e0;
+	border-bottom: 2px solid #aaaaaa;
+
+	color: #aa1e14 !important;
+	text-align: center;
+}
+
+.front-block:not(.odd) .scrollato-button:hover {
+	background-color: #aaaaaa;
+	border-bottom: 2px solid #e0e0e0;
 }

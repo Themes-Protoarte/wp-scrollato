@@ -20,7 +20,7 @@
 		    $(document).ready(function() {
 		    	var s = skrollr.init({
 		    		smoothScrolling: true,
-		    		smoothScrollingDuration: 200,
+		    		smoothScrollingDuration: 300,
 		    		forceHeight: false,
 		    		mobileDeceleration: 0.004
 		    	});
