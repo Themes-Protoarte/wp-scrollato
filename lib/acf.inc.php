@@ -87,13 +87,6 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
-
-
-
-
-
-
-
 	register_field_group(array (
 		'id' => 'acf_author-page-colors',
 		'title' => 'Author page colors',
@@ -128,6 +121,30 @@ if(function_exists("register_field_group"))
 				'name' => 'link_color_hover',
 				'type' => 'color_picker',
 				'instructions' => 'Choose a color for the link-hover',
+				'default_value' => '',
+			),
+			array (
+				'key' => 'field_52d92792b17d0',
+				'label' => 'Nav background color',
+				'name' => 'nav_bgcolor',
+				'type' => 'color_picker',
+				'instructions' => 'Choose the color for the nav background',
+				'default_value' => '',
+			),
+			array (
+				'key' => 'field_52d927a3b17d1',
+				'label' => 'Nav link color',
+				'name' => 'nav_link_color',
+				'type' => 'color_picker',
+				'instructions' => 'Choose the color for the nav links',
+				'default_value' => '',
+			),
+			array (
+				'key' => 'field_52d927b5b17d2',
+				'label' => 'Nav link color (hover)',
+				'name' => 'nav_link_color_hover',
+				'type' => 'color_picker',
+				'instructions' => 'Choose the color for the nav link-hover',
 				'default_value' => '',
 			),
 		),

@@ -25,6 +25,18 @@
 					.author .avatar .avatar {
 						border-color: <?php echo get_field( 'text_color', "user_" . $curauth->ID ); ?>;
 					}
+
+					#front-nav {
+						background-color: <?php echo get_field( 'nav_bgcolor', "user_" . $curauth->ID ); ?>;
+					}
+
+					#front-nav a:link,
+					#front-nav a:visited {
+						color: <?php echo get_field( 'nav_link_color', "user_" . $curauth->ID ); ?>;
+					}
+
+					#front-nav a:hover {
+						color: <?php echo get_field( 'nav_link_color_hover', "user_" . $curauth->ID ); ?>;
 				</style>
 
 				<div class="title">
@@ -56,6 +68,8 @@
 							</li>
 						<?php endwhile; ?>
 						</ul>
+
+						<div id="front-nav"><a class="no-scroll" href="<?php bloginfo( 'wpurl' ); ?>/"><?php bloginfo( 'name' ); ?></a></div>
 					<?php else: ?>
 						<p><?php _e('No posts by this author.', 'scrollato'); ?></p>
 					<?php endif; ?>
