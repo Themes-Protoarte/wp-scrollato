@@ -1,1 +1,1 @@
-<?php include( 'front-page.php' ); ?>
+<?php header( "location: " . get_bloginfo( 'wpurl' ) ); ?>
