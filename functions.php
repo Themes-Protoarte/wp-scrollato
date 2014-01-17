@@ -37,15 +37,15 @@ $opt_list = array(
 	'block-odd-bgcolor' => '#ededed',
 	'block-even-color' => '#ffffff',
 	'block-odd-color' => '#443535',
-	'block-even-a-color' => '#656565',
+	'block-even-a-color' => '#ededed',
 	'block-odd-a-color' => '#656565',
-	'block-even-a-hover-color' => 'black',
-	'block-odd-a-hover-color' => 'black',
+	'block-even-a-hover-color' => '#630303',
+	'block-odd-a-hover-color' => '#443535',
 	'nav-bgcolor' => '#ededed',
 	'nav-box-shadow' => '1px 1px 2px #323232',
 	'nav-a-color' => '#121212',
 	'nav-a-hover-color' => '#aa1e14',
-	'footer-content' => '<a href="http://filopoe.it/themes/Scrollato/">Scrollato</a> theme by <a href="http://filopoe.it/">Gabriele Girelli</a>',
+	'footer-content' => '<a href="http://filopoe.it/themes/Scrollato/">Scrollato</a> theme by <a href="http://filopoe.it/chi-sono/">Gabriele Girelli</a>',
 	'extra-css' => ''
 );
 foreach ( $opt_list as $opt => $val ) {
