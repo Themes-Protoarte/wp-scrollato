@@ -58,7 +58,7 @@ header("Content-type: text/css; charset: UTF-8");
 }
 
 .front-block:not(.odd) .block a:hover {
-	color: <?php echo get_option( 'scrollato-block-odd-a-hover-color' ); ?>
+	color: <?php echo get_option( 'scrollato-block-even-a-hover-color' ); ?>
 }
 
 .front-block.odd .block a:link,
