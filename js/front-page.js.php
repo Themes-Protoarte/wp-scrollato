@@ -24,7 +24,7 @@ jQuery(document).ready(function($) {
 	});
 
 	// Front nav
-	$("#front-nav a").each(function() {
+	$("#front-nav a:not(.no-scroll)").each(function() {
 		$(this).click(function(e) {
 			e.preventDefault();
 			$.scrollTo( $("#block-" + $(this).attr('data-ind') ), 800 );

@@ -32,7 +32,7 @@ header("Content-type: text/css; charset: UTF-8");
 	max-width: <?php echo get_option( 'scrollato-header-text-maxwidth', 0 ); ?>;
 }
 
-/* FRONT BLOCKS */
+/* FRONT BLOCKS & PAGE */
 
 .front-block:not(.odd) {
 	background: <?php echo get_option( 'scrollato-block-even-bgcolor' ); ?>;
@@ -61,11 +61,14 @@ header("Content-type: text/css; charset: UTF-8");
 	color: <?php echo get_option( 'scrollato-block-even-a-hover-color' ); ?>
 }
 
+.single-page-post.block a:link,
+.single-page-post.block a:visited,
 .front-block.odd .block a:link,
 .front-block.odd .block a:visited {
 	color: <?php echo get_option( 'scrollato-block-odd-a-color' ); ?>
 }
 
+.single-page-post.block a:hover,
 .front-block.odd .block a:hover {
 	color: <?php echo get_option( 'scrollato-block-odd-a-hover-color' ); ?>
 }
