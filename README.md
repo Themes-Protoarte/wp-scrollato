@@ -1,6 +1,6 @@
 #Scrollato
 
-A simple page-based Wordpress theme (<a href="http://filopoe.it/themes/Scrollato/" title="Preview">preview</a>).
+A simple page-based <a href="http://wordpress.org/" title="Wordpress">Wordpress</a> theme (<a href="http://filopoe.it/themes/Scrollato/" title="Preview">preview</a>) inspired by the <a href="https://github.com/grmmph/GhostScroll">GhostScroll</a> theme for <a href="https://ghost.org/" title="Ghost">Ghost</a>.
 
 ##Future features
 
