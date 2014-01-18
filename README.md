@@ -1,9 +1,8 @@
-wp-scrollato
-============
+#Scrollato
 
-A simple page-based Wordpress theme.
+A simple page-based Wordpress theme (<a href="http://filopoe.it/themes/Scrollato/" title="Preview">preview</a>).
 
-Future features:
+##Future features
 
 * Full mobile support
 * Cover blur option
