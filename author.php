@@ -53,6 +53,8 @@
 					<span class="label">Profile</span>
 					<span class="info"><?php echo $curauth->user_description; ?></span>
 				</div>
+
+				<div id="front-nav"><a class="no-scroll" href="<?php bloginfo( 'wpurl' ); ?>/"><?php bloginfo( 'name' ); ?></a></div>
 			</div>
 
 <?php get_footer(); ?>
