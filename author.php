@@ -53,27 +53,6 @@
 					<span class="label">Profile</span>
 					<span class="info"><?php echo $curauth->user_description; ?></span>
 				</div>
-				
-				<div class="post-list">
-					<span class="label">Posts by <?php echo $curauth->nickname; ?>:</span>
-
-					<!-- The Loop -->
-					<?php if ( have_posts() ) : ?>
-						<ul>
-						<?php while ( have_posts() ) : the_post(); ?>
-							<li class="info">
-								<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link: <?php the_title(); ?>">
-								<?php the_title(); ?></a>,
-								<?php the_time('d M Y'); ?>.
-							</li>
-						<?php endwhile; ?>
-						</ul>
-
-						<div id="front-nav"><a class="no-scroll" href="<?php bloginfo( 'wpurl' ); ?>/"><?php bloginfo( 'name' ); ?></a></div>
-					<?php else: ?>
-						<p><?php _e('No posts by this author.', 'scrollato'); ?></p>
-					<?php endif; ?>
-				</div>
 			</div>
 
 <?php get_footer(); ?>
