@@ -4,7 +4,7 @@ Theme URI: http://filopoe.it/Scrollato/
 Author: Gabriele Girelli
 Author URI: http://filopoe.it/
 Description: A simple front-page Wordpress theme
-Version: 2.3.0
+Version: 2.3.1
 License: MIT
 License URI: http://opensource.org/licenses/MIT
 Tags: one-column, fluid-layout, full-width-template
@@ -47,6 +47,18 @@ html {
 
 body {
 	margin-top: -32px;
+}
+
+#meta-access {
+	position: fixed;
+	top: 0;
+	right: 0;
+
+	display: block;
+	height: 40px;
+	width: 40px;
+
+	z-index: 5;
 }
 
 /* FRONT HEADER */
