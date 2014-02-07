@@ -235,4 +235,15 @@ function scrollato_admin_enqueue()
 }
 add_action( 'admin_enqueue_scripts', 'scrollato_admin_enqueue' );
 
+
+#############
+# ADMIN BAR #
+#############
+
+function scrollato_admin_bar() {
+    global $wp_admin_bar;
+    $wp_admin_bar->remove_menu('new-content');
+}
+add_action( 'wp_before_admin_bar_render', 'scrollato_admin_bar' );
+
 ?>
