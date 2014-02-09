@@ -60,4 +60,14 @@
 
 		<footer id="site-footer"><?php echo stripslashes( get_option( 'scrollato-footer-content' ) ); ?></footer>
 
+	    <script type="text/javascript">
+		    $(document).ready(function() {
+		    	var s = skrollr.init({
+		    		smoothScrolling: true,
+		    		smoothScrollingDuration: 300,
+		    		forceHeight: false,
+		    	});
+		    });
+	    </script>
+	    
 <?php get_footer(); ?>

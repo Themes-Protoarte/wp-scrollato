@@ -16,15 +16,6 @@
 		<link rel="shortcut icon" href="<?php echo get_option( 'scrollato-favicon' ); ?>" />
 		<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
 		<?php wp_head(); ?>
-	    <script type="text/javascript">
-		    $(document).ready(function() {
-		    	var s = skrollr.init({
-		    		smoothScrolling: true,
-		    		smoothScrollingDuration: 300,
-		    		forceHeight: false,
-		    	});
-		    });
-	    </script>
 	    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsive.css" type="text/css" media="screen" />
 	</head>
 	<body id="skrollr-body" <?php body_class(); ?>>
