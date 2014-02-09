@@ -67,6 +67,8 @@
 		    		smoothScrollingDuration: 300,
 		    		forceHeight: false,
 		    	});
+
+		    	setTimeout(function() { skrollr.get().refresh()},0)
 		    });
 	    </script>
 

@@ -36,11 +36,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 body,
 html {
-	height: 100%;
 	width: 100%;
 
 	margin: 0;
 	padding: 0;
+
+	overflow: auto;
 
 	font-family: "Andika";
 	font-size: 20px;
